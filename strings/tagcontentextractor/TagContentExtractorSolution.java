@@ -52,7 +52,7 @@ public class TagContentExtractorSolution {
 
     private static boolean allIsInvalid(String tag, List<String> tags) {
         List<String> list = tags.stream().filter(f -> !f.startsWith("<") && !f.startsWith(">")).collect(Collectors.toList());
-        return list.isEmpty() || list.getLast().equals(tag);
+        return list.isEmpty() || list.get(list.size() - 1).equals(tag);
     }
 
     private static boolean same(String s, String s1) {
