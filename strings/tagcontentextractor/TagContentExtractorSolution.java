@@ -20,7 +20,7 @@ public class TagContentExtractorSolution {
                 tags = new ArrayList<>();
             }
 
-            if (tags.isEmpty() || naoContemFrase(tags)) {
+            if (tags.isEmpty() || notExistContent(tags)) {
                 System.out.println("None");
             }
 
@@ -42,7 +42,7 @@ public class TagContentExtractorSolution {
         }
     }
 
-    private static boolean naoContemFrase(List<String> tags) {
+    private static boolean notExistContent(List<String> tags) {
         if (tags == null) {
             return false;
         }
