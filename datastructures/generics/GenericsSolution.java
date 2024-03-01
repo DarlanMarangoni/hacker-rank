@@ -4,10 +4,8 @@ import java.util.List;
 
 public class GenericsSolution {
     public static void main(String[] args) {
-        List<String> strings = Arrays.asList("Hello", "World");
-        List<Integer> integers = Arrays.asList(1,2,3);
-        new Printer<Integer>().print(integers);
-        new Printer<String>().print(strings);
+        new Printer<Integer>().print(Arrays.asList(1,2,3));
+        new Printer<String>().print(Arrays.asList("Hello", "World"));
     }
 
     static class Printer<T> {
