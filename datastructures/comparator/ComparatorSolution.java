@@ -14,8 +14,8 @@ public class ComparatorSolution {
             Integer score = scanner.nextInt();
             playerList.add(new Player(name, score));
         }
-        ScoreComparator scoreComparator = new ScoreComparator();
-        playerList.sort(scoreComparator);
+        PlayerComparator playerComparator = new PlayerComparator();
+        playerList.sort(playerComparator);
         playerList.forEach(player -> System.out.println(player.name + " " + player.score));
     }
 
@@ -29,7 +29,7 @@ public class ComparatorSolution {
         }
     }
 
-    static class ScoreComparator implements Comparator<Player> {
+    static class PlayerComparator implements Comparator<Player> {
         @Override
         public int compare(Player p1, Player p2) {
             int result = p2.score - p1.score;
